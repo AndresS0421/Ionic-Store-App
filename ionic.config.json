@@ -1,0 +1,7 @@
+{
+  "name": "ListaDinamica",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
