@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Menú</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-img [src]="storeUrl" style="width: 100px;"></ion-img>
+    <ion-card-header>
+      <ion-card-title>{{ storeName }}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-list>
+    <ion-item routerLink="/productos">Productos</ion-item>
+    <ion-item routerLink="/clientes">Clientes</ion-item>
+  </ion-list>
+</ion-content>

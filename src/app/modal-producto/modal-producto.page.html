@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      {{ product ? 'Editar' : 'Agregar' }} Producto
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="saveProduct()">
+    <ion-item>
+      <ion-label position="stacked" >Nombre</ion-label>
+      <ion-input [(ngModel)]="productData.nombre" name="nombre" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" >Descripción</ion-label>
+      <ion-input [(ngModel)]="productData.descripcion" name="descripcion"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" >Cantidad</ion-label>
+      <ion-input [(ngModel)]="productData.cantidad" name="cantidad" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" >Costo</ion-label>
+      <ion-input [(ngModel)]="productData.precioCosto" name="precioCosto"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" >Precio de Venta</ion-label>
+      <ion-input [(ngModel)]="productData.precioVenta" name="precioVenta" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" >URL Imagen</ion-label>
+      <ion-input [(ngModel)]="productData.url" name="url"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" color="primary" type="submit">{{ product ? "Editar" : "Agregar" }}</ion-button>
+  </form>
+</ion-content>
